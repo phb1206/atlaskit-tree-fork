@@ -68,6 +68,7 @@ var Tree = /*#__PURE__*/function (_Component) {
     });
 
     _defineProperty(_assertThisInitialized(_this), "onDragUpdate", function (update) {
+      var onDragUpdate = _this.props.onDragUpdate;
       var onExpand = _this.props.onExpand;
       var flattenedTree = _this.state.flattenedTree;
 
@@ -79,6 +80,11 @@ var Tree = /*#__PURE__*/function (_Component) {
 
       if (update.combine) {
         var draggableId = update.combine.draggableId;
+
+        if (onDragUpdate) {
+          onDragUpdate(draggableId);
+        }
+        
         var item = getItemById(flattenedTree, draggableId);
 
         if (item && _this.isExpandable(item)) {
@@ -86,7 +92,10 @@ var Tree = /*#__PURE__*/function (_Component) {
             return onExpand(draggableId, item.path);
           });
         }
+      } else if (onDragUpdate) {
+        onDragUpdate(null);
       }
+
 
       _this.dragState = _objectSpread(_objectSpread({}, _this.dragState), {}, {
         destination: update.destination,

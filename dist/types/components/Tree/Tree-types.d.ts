@@ -11,6 +11,7 @@ export declare type Props = {
     onCollapse: (itemId: ItemId, path: Path) => void;
     /** Function that will be called when the user starts dragging. */
     onDragStart: (itemId: ItemId) => void;
+    onDragUpdate: (itemId: ItemId) => void;
     /** Function that will be called when the user finishes dragging. */
     onDragEnd: (sourcePosition: TreeSourcePosition, destinationPosition?: TreeDestinationPosition) => void;
     /** Function that will be called to render a single item. */

@@ -42,6 +42,9 @@ export default class Tree extends Component {
 
     _defineProperty(this, "onDragUpdate", update => {
       const {
+        onDragUpdate
+      } = this.props;
+      const {
         onExpand
       } = this.props;
       const {
@@ -58,11 +61,18 @@ export default class Tree extends Component {
         const {
           draggableId
         } = update.combine;
+
+        if (onDragUpdate) {
+          onDragUpdate(draggableId);
+        }
+
         const item = getItemById(flattenedTree, draggableId);
 
         if (item && this.isExpandable(item)) {
           this.expandTimer.start(() => onExpand(draggableId, item.path));
         }
+      } else if (onDragUpdate) {
+        onDragUpdate(null);
       }
 
       this.dragState = { ...this.dragState,

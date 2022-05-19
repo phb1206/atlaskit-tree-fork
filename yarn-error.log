@@ -1,0 +1,91 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js install
+
+PATH: 
+  C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\IBM\Notes\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\ConfigMgr 2012 Toolkit R2\ClientTools;C:\Program Files\nodejs\;C:\Program Files (x86)\Yarn\bin\;C:\Users\pbrandaode001\AppData\Local\Microsoft\WindowsApps;C:\Users\pbrandaode001\AppData\Local\Programs\Git\cmd;C:\Users\pbrandaode001\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\pbrandaode001\AppData\Roaming\npm;C:\Users\pbrandaode001\AppData\Local\Yarn\bin
+
+Yarn version: 
+  1.22.18
+
+Node version: 
+  18.0.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: https://registry.npmjs.org/@atlaskit%2fvisual-regression: Not found
+      at params.callback [as _callback] (C:\Program Files (x86)\Yarn\lib\cli.js:66138:18)
+      at self.callback (C:\Program Files (x86)\Yarn\lib\cli.js:140883:22)
+      at Request.emit (node:events:527:28)
+      at Request.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:141855:10)
+      at Request.emit (node:events:527:28)
+      at IncomingMessage.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:141777:12)
+      at Object.onceWrapper (node:events:641:28)
+      at IncomingMessage.emit (node:events:539:35)
+      at endReadableNT (node:internal/streams/readable:1344:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+
+npm manifest: 
+  {
+    "name": "@atlaskit/tree",
+    "version": "8.6.1",
+    "description": "A React Component for displaying expandable and sortable tree hierarchies",
+    "publishConfig": {
+      "registry": "https://registry.npmjs.org/"
+    },
+    "repository": "https://bitbucket.org/atlassian/atlassian-frontend",
+    "author": "Atlassian Pty Ltd",
+    "license": "Apache-2.0",
+    "main": "dist/cjs/index.js",
+    "module": "dist/esm/index.js",
+    "module:es2019": "dist/es2019/index.js",
+    "types": "dist/types/index.d.ts",
+    "sideEffects": false,
+    "atlaskit:src": "src/index.ts",
+    "atlassian": {
+      "team": "Confluence Discovery & Organization",
+      "deprecatedAutoEntryPoints": true,
+      "releaseModel": "continuous",
+      "website": {
+        "name": "Tree"
+      }
+    },
+    "dependencies": {
+      "@babel/runtime": "^7.0.0",
+      "css-box-model": "^1.2.0",
+      "react-beautiful-dnd-next": "11.0.5"
+    },
+    "peerDependencies": {
+      "react": "^16.8.0"
+    },
+    "devDependencies": {
+      "@atlaskit/button": "^16.3.0",
+      "@atlaskit/docs": "*",
+      "@atlaskit/icon": "^21.10.0",
+      "@atlaskit/navigation": "^37.0.0",
+      "@atlaskit/spinner": "^15.0.0",
+      "@atlaskit/theme": "^12.1.0",
+      "@atlaskit/visual-regression": "*",
+      "@atlassian/atlassian-frontend-prettier-config-1.0.1": "npm:@atlassian/atlassian-frontend-prettier-config@1.0.1",
+      "enzyme": "^3.10.0",
+      "enzyme-adapter-react-16": "^1.15.1",
+      "exenv": "^1.2.2",
+      "react-dom": "^16.8.0",
+      "styled-components": "^3.2.6",
+      "typescript": "4.2.4",
+      "wait-for-expect": "^1.2.0"
+    },
+    "keywords": [
+      "atlaskit",
+      "react",
+      "ui"
+    ],
+    "prettier": "@atlassian/atlassian-frontend-prettier-config-1.0.1"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

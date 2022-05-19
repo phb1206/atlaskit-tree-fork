@@ -11,6 +11,7 @@ export default class Tree extends Component<Props, State> {
         onExpand: () => void;
         onCollapse: () => void;
         onDragStart: () => void;
+        onDragUpdate: () => void;
         onDragEnd: () => void;
         renderItem: () => void;
         offsetPerLevel: number;
